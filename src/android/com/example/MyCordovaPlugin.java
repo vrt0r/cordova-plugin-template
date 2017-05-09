@@ -24,12 +24,6 @@ public class MyCordovaPlugin extends CordovaPlugin {
 
     Log.d(TAG, "Initializing MyCordovaPlugin");
   }
-  
-  public void onActivityResult(int requestCode, int resultCode, Intent intent) {
-    if (requestCode == 1543) {
-      
-    }
-  }
 
   public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
     if(action.equals("echo")) {
