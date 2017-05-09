@@ -13,3 +13,11 @@ var MyCordovaPlugin = {
 };
 
 module.exports = MyCordovaPlugin;
+
+// Make plugin work under window.plugins
+if (!window.plugins) {
+    window.plugins = {};
+}
+if (!window.plugins.mycordova) {
+    window.plugins.mycordova = MyCordovaPlugin;
+}
